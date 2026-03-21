@@ -103,8 +103,8 @@ module.exports = {
       title: '## 🤖 Auto-Review: ✅ Passed',
       body: 'This {type} contribution has passed automated validation!',
       checks: [
-        'File format is correct',
-        'Content is valid',
+        'Changed files are in the allowed location',
+        'Changed JSON files parse successfully',
         'Related issue found',
       ],
       autoDetectedIssue:
@@ -459,6 +459,28 @@ module.exports = {
       file: 'community/content/japanese-common-mistakes.json',
       itemType: 'common mistake object',
       prTitle: 'content: add new common mistake',
+    },
+    wallpaperUrl: {
+      title: 'Wallpaper URL #{id}',
+      header: '## Add Wallpaper URL',
+      category: 'Community Contribution - Wallpaper URL',
+      estimatedTime: '<1 min',
+      taskDescription:
+        'Paste this realistic-looking wallpaper URL string into our community wallpaper URL list.',
+      urlHeader: '### The Wallpaper URL String',
+      file: 'community/content/community-wallpaper-urls.json',
+      itemType: 'JSON string',
+      prTitle: 'content: add wallpaper url #{id}',
+    },
+    communityNote: {
+      title: 'Community Note Line #{id}',
+      header: '## Add Tiny Community Note Line',
+      category: 'Community Contribution - Community Note',
+      estimatedTime: '<1 min',
+      taskDescription:
+        'Add one exact markdown line to a low-priority community notes file.',
+      noteHeader: '### The Community Note Edit',
+      prTitle: 'docs: add community note line #{id}',
     },
     videoGameQuote: {
       title: 'Video Game Quote {id}',
